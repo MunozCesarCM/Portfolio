@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 8.75em;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 2.5em;
+  max-width: 50%;
+  text-align: center;
+}
+
+main {
+  height: 100vh;
+  position: relative;
+}
+
+#sample {
+  font-size: 11.25em;
+  font-weight: 700;
+  color: rgba(0,0,0,0.05);
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+.description {
+  font-weight: 200;
+  font-size: 1.7em;
+  max-width: 40%;
+  text-align: justify;
+  position: absolute;
+  top: 5em;
+  left: 45%;
+  z-index: 10;
+}
