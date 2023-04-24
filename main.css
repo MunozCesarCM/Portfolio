@@ -1,7 +1,15 @@
+@font-face { font-family: Avenir; font-weight: 100; src: url('./assets/fonts/Avenir/Avenir-Light-07.ttf');}
+@font-face { font-family: Avenir; font-weight: 200; src: url('./assets/fonts/Avenir/Avenir-Book-01.ttf');}
+@font-face { font-family: Avenir; font-weight: 300; src: url('./assets/fonts/Avenir/Avenir-Roman-12.ttf');}
+@font-face { font-family: Avenir; font-weight: 400; src: url('./assets/fonts/Avenir/Avenir-Medium-09.ttf');}
+@font-face { font-family: Avenir; font-weight: 500; src: url('./assets/fonts/Avenir/Avenir-Heavy-05.ttf');}
+@font-face { font-family: Avenir; font-weight: 600; src: url('./assets/fonts/Avenir/Avenir-Black-03.ttf');}
+@font-face { font-family: Valencia; src: url('./assets/fonts/Valencia/Valencia.ttf');}
+
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Avenir, sans-serif;
 }
 
 body {
@@ -14,43 +22,44 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1em;
 }
 
 h1 {
-  font-family: 'Herr Von Muellerhoff', cursive;
+  font-family: Valencia, sans-serif;
   font-size: 8.75em;
+  font-weight: 400;
 }
 
 h2 {
   font-weight: 300;
-  font-size: 2.5em;
-  max-width: 50%;
+  font-size: 50px;
   text-align: center;
 }
 
-main {
-  height: 100vh;
+main, footer {
+  height: 80vh;
   position: relative;
 }
 
-#sample {
+#about, #skills {
   font-size: 11.25em;
   font-weight: 700;
   color: rgba(0,0,0,0.05);
   text-transform: uppercase;
   position: absolute;
-  top: 0;
+  top: 30%;
   left: 0;
   white-space: nowrap;
 }
 
 .description {
-  font-weight: 200;
-  font-size: 1.7em;
-  max-width: 40%;
+  font-weight: 100;
+  font-size: 2.5em;
+  max-width: 60%;
+  top: calc(2.5em + 30%);
+  left: 30%;
   text-align: justify;
   position: absolute;
-  top: 5em;
-  left: 45%;
-  z-index: 10;
+  z-index: 2;
 }
