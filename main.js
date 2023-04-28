@@ -8,3 +8,8 @@ window.addEventListener('scroll', () => {
   about.style.transform = `translateX(${offsetY * 0.6 - 200}px)`;
   skill.style.transform = `translateX(${(width * 0.6) - offsetY * 0.6 + 200}px)`;
 });
+
+// Scroll to top on window reload
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
