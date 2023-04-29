@@ -16,19 +16,33 @@ body {
   overflow-x: hidden;
 }
 
-header {
-  height: 100vh;
+header, .scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+header {
+  height: 80vh;
   gap: 1em;
+}
+
+.scroll {
+  height: 20vh;
+  opacity: 1;
+}
+
+lottie-player {
+  width: 50px;
+  height: 50px;
 }
 
 h1 {
   font-family: Valencia, sans-serif;
   font-size: 8.75em;
   font-weight: 400;
+  margin-top: 10vh;
 }
 
 h2 {
@@ -37,7 +51,7 @@ h2 {
   text-align: center;
 }
 
-main, footer {
+.about-container, footer {
   height: 80vh;
   position: relative;
 }
@@ -64,6 +78,10 @@ main, footer {
   z-index: 2;
 }
 
+main div {
+  background-color: #f0f0f0;
+  height: 100vh;
+}
 
 @keyframes loadAnimation {
   0% {
