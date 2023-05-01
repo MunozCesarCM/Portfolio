@@ -6,6 +6,13 @@
 @font-face { font-family: Avenir; font-weight: 600; src: url('./assets/fonts/Avenir/Avenir-Black-03.ttf');}
 @font-face { font-family: Valencia; src: url('./assets/fonts/Valencia/Valencia.ttf');}
 
+:root {
+  --color-github: #333333;
+  --color-project-1: #FFC80C;
+  --color-project-2: #3c64fd;
+  --color-project-3: #43b02a;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -123,44 +130,30 @@ main .project {
 }
 
 .github-btn {
-  border: 2px solid #333333;
-  background-color: #000000;
-}
-
-.github-btn:hover {
-  background-color: transparent;
-  color: #333333;
+  border: 2px solid var(--color-github);
+  background-color: var(--color-github);
 }
 
 .live-btn-1 {
-  border: 2px solid #FFC80C;
-  background-color: #FFC80C;
-}
-
-.live-btn-1:hover {
-  background-color: transparent;
-  color: #FFC80C;
+  border: 2px solid var(--color-project-1);
+  background-color: var(--color-project-1);
 }
 
 .live-btn-2 {
-  border: 2px solid #3c64fd;
-  background-color: #3c64fd;
-}
-
-.live-btn-2:hover {
-  background-color: transparent;
-  color: #3c64fd;
+  border: 2px solid var(--color-project-2);
+  background-color: var(--color-project-2);
 }
 
 .live-btn-3 {
-  border: 2px solid #43b02a;
-  background-color: #43b02a;
+  border: 2px solid var(--color-project-3);
+  background-color: var(--color-project-3);
 }
 
-.live-btn-3:hover {
-  background-color: transparent;
-  color: #43b02a;
-}
+.btn:hover { background-color: transparent; }
+.github-btn:hover { color: var(--color-github); }
+.live-btn-1:hover { color: var(--color-project-1); }
+.live-btn-2:hover { color: var(--color-project-2); }
+.live-btn-3:hover { color: var(--color-project-3); }
 
 a img {
   width: 1.5rem;
@@ -205,18 +198,6 @@ main .screenshots {
 .img-9  { right: 2%; bottom: 0; z-index: 2; width: 35vw; }
 .img-10 { left:  3%; bottom: 0; z-index: 3; width: 25vw; }
 
-@keyframes loadAnimation {
-  0% {
-    height: 100%;
-  }
-  40% {
-    height: 100%;
-  }
-  100% {
-    height: 0%;
-  }
-}
-
 .overlay {
   background-color: black;
   position: absolute;
@@ -226,16 +207,13 @@ main .screenshots {
   z-index: 100;
 }
 
-.first {
-  animation: 1100ms ease-out 0ms 1 loadAnimation;
+.first  { animation: 1100ms ease-out 0ms 1 loadAnimation; }
+.second { animation: 1400ms ease-out 0ms 1 loadAnimation; left: 33.3%; }
+.third  { animation: 1700ms ease-out 0ms 1 loadAnimation; left: 66.6%; }
+
+@keyframes loadAnimation {
+  0%   { height: 100%; }
+  40%  { height: 100%; }
+  100% { height: 0%; }
 }
 
-.second {
-  animation: 1400ms ease-out 0ms 1 loadAnimation;
-  left: 33.3%;
-}
-
-.third {
-  animation: 1700ms ease-out 0ms 1 loadAnimation;
-  left: 66.6%;
-}
