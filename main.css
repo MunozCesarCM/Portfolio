@@ -59,8 +59,13 @@ h2 {
   text-align: center;
 }
 
-.about-container, footer {
+.about-container {
   height: 80vh;
+  position: relative;
+}
+
+footer {
+  height: 100vh;
   position: relative;
 }
 
@@ -73,6 +78,14 @@ h2 {
   top: 30%;
   left: 0;
   white-space: nowrap;
+}
+
+#about {
+
+}
+
+#skills {
+
 }
 
 .description {
@@ -92,7 +105,7 @@ h2 {
 }
 
 .project {
-  width: 45vw;
+  width: 40vw;
   margin: 2.5vw;
 }
 
@@ -112,7 +125,7 @@ h2 {
     }
 
   .project p {
-    font-size: 1.5em;
+    font-size: 1.3vw;
     font-weight: 100;
     line-height: 1.7;
     margin-top: 30px;
@@ -172,20 +185,20 @@ h2 {
   border-radius: 15px;
 }
 
-.img-1 { right: 4%; bottom: 0; z-index: 1; width: 30vw; }
-.img-2 { left:  2%; bottom: 0; z-index: 2; width: 35vw; }
-.img-3 { right: 3%; bottom: 0; z-index: 3; width: 25vw; }
-.img-4 { left:  3%; bottom: 0; z-index: 1; width: 25vw; }
+.img-1 { right: 0%; bottom: 0; z-index: 1; width: 45vh; }
+.img-2 { left:  2%; bottom: 0; z-index: 2; width: 55vh; }
+.img-3 { right: 3%; bottom: 0; z-index: 3; width: 35vh; }
+.img-4 { left:  3%; bottom: 0; z-index: 1; width: 35vh; }
 
-.img-5 { right: 4%; bottom: 0; z-index: 1; width: 28vw; }
-.img-6 { left:  2%; bottom: 0; z-index: 2; width: 30vw; }
-.img-7 { right: 3%; bottom: 0; z-index: 1; width: 25vw; }
-.img-8 { left:  3%; bottom: 0; z-index: 1; width: 25vw; }
+.img-5 { left:  4%; bottom: 0; z-index: 1; width: 45vh; }
+.img-6 { right: 2%; bottom: 0; z-index: 2; width: 55vh; }
+.img-7 { left:  3%; bottom: 0; z-index: 1; width: 35vh; }
+.img-8 { right: 5%; bottom: 0; z-index: 1; width: 35vh; }
 
-.img-9  { right: 4%; bottom: 0; z-index: 1; width: 28vw; }
-.img-10 { left:  2%; bottom: 0; z-index: 2; width: 30vw; }
-.img-11 { right: 3%; bottom: 0; z-index: 1; width: 25vw; }
-.img-12 { left:  3%; bottom: 0; z-index: 1; width: 25vw; }
+.img-9  { right: 4%; bottom: 0; z-index: 3; width: 45vh; }
+.img-10 { left:  2%; bottom: 0; z-index: 2; width: 55vh; }
+.img-11 { right: 0%; bottom: 0; z-index: 1; width: 35vh; }
+.img-12 { left:  3%; bottom: 0; z-index: 1; width: 35vh; }
 
 .overlay {
   background-color: black;
