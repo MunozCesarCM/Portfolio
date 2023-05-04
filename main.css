@@ -65,7 +65,7 @@ h2 {
 }
 
 footer {
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
@@ -78,14 +78,6 @@ footer {
   top: 30%;
   left: 0;
   white-space: nowrap;
-}
-
-#about {
-
-}
-
-#skills {
-
 }
 
 .description {
