@@ -91,6 +91,18 @@ footer {
   z-index: 2;
 }
 
+.description i {
+  font-size: 3.75em;
+  margin: 2.5vh 3.75vw;
+}
+
+footer > .description {
+  top: calc(2.5em + 10%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
