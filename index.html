@@ -8,22 +8,31 @@
     <link rel='icon' type='image/x-icon' href='assets/images/favicon.ico'>
     <link rel='stylesheet' href='./main.css' />
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/munozcesarcm/flexcore/public/flexcore.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@200&family=Prata&display=swap" rel="stylesheet">
   </head>
   <body>
-    <section>
-      <h1>Section One</h1>
-      <div id='yellow-circle'></div>
-      <div id='black-circle'></div>
-      <div id='black-outline'></div>
+    <figure id='yellow-circle'></figure>
+    <figure id='black-circle'></figure>
+    <figure id='black-outline'></figure>
+    <nav class='fixed text-3xl mt-5 w-screen flex justify-center gap-5 items-center z-50'>
+      <figure id='title-circle-hide'>⬤</figure>
+      <h1 class='weight-500' id='title'>CESAR MUÑOZ</h1>
+      <figure class='cursor-pointer' id='title-circle-show' onclick='scrollToTop()'>⬤</figure>
+    </nav>
+    <section id='section1'>
+      <h2>Front-end<br />web developer</h2>
+      <p>Front-end developer who cares deeply about user experience. Serious passion for UI design and new technologies.</p>
     </section>
-    <section>
-      <h1>Section Two</h1>
+    <section id='section2'>
+      <h2>About</h2>
     </section>
-    <section>
-      <h1>Section Three</h1>
+    <section id='section3'>
+      <h2>Flexcore</h2>
     </section>
-    <section>
-      <h1>Section Four</h1>
+    <section id='section4'>
+      <h2>Amazon Clone</h2>
     </section>
     <script src='./main.js'></script>
   </body>

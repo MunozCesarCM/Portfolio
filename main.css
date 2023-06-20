@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'UltraSolar';
+  src: url('./assets/UltraSolar_Normal.ttf')
+}
+
 * { box-sizing: border-box; }
 
 ::-webkit-scrollbar { display: none; }
@@ -7,7 +12,12 @@ html {
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
+}
+h1, h2, h3 {
+  color: #2F2F2F;
+  font-family: 'UltraSolar', serif;
+  font-weight: 600;
 }
 
 section {
@@ -15,6 +25,29 @@ section {
   scroll-snap-align: start;
   position: relative;
   z-index: 10;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+#title {
+  transition: all 0.5s ease-in-out;
+}
+#title-circle-hide {
+  color: #FFE793;
+  transition:all 0.5s ease-in-out
+}
+#title-circle-show {
+  transition:all 0.5s ease-in-out
+}
+
+#section1 { opacity: 1; }
+
+.flex::before {
+  content: '';
+}
+
+.flex::after {
+  content: '';
 }
 
 #yellow-circle {
@@ -22,10 +55,10 @@ section {
   height: 80vw;
   width: 80vw;
   position: fixed;
-  top: -40vw;
-  left: 48vw;
+  top: -75vh;
+  left: 50vw;
   border-radius: 100%;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
   z-index: 3;
 }
 
@@ -34,10 +67,10 @@ section {
   height: 50vw;
   width: 50vw;
   position: fixed;
-  top: 33vw;
-  right: 70vw;
+  top: 70vh;
+  right: 75vw;
   border-radius: 100%;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
   z-index: 2;
 }
 
@@ -45,10 +78,40 @@ section {
   height: 60vw;
   width: 60vw;
   position: fixed;
-  top: 40vw;
-  right: 45vw;
+  top: 65vh;
+  right: 50vw;
   border: 1.5px solid #2F2F2F;
   border-radius: 100%;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
   z-index: 1;
+}
+
+#section1 > h2 {
+  padding-top: 20vh;
+  padding-left: 20vw;
+  font-size: 11em;
+}
+
+#section1 > p {
+  color: #2F2F2F;
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 200;
+  font-size: 3.75em;
+  padding-top: 7.5vh;
+  padding-left: 40vw;
+  padding-right: 20vw;
+}
+
+#section2 > h2  {
+  padding-top: 18vh;
+  font-size: 9em;
+  text-align: center;
+}
+
+#section3 > h2,
+#section4 > h2 {
+  color: white;
+  padding-top: 20vh;
+  font-size: 9em;
+  text-align: center;
 }
