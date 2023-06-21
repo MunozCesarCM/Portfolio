@@ -7,6 +7,7 @@
     <title>Cesar Munoz</title>
     <link rel='icon' type='image/x-icon' href='assets/images/favicon.ico'>
     <link rel='stylesheet' href='./main.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/munozcesarcm/flexcore/public/flexcore.css' />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,22 +17,35 @@
     <figure id='yellow-circle'></figure>
     <figure id='black-circle'></figure>
     <figure id='black-outline'></figure>
-    <nav class='fixed text-3xl mt-5 w-screen flex justify-center gap-5 items-center z-50'>
+    <nav class='fixed mt-5 w-screen flex justify-center items-center gap-5 z-50'>
       <figure id='title-circle-hide'>⬤</figure>
-      <h1 class='weight-500' id='title'>CESAR MUÑOZ</h1>
+      <h1 class='text-neutral-800 weight-500' id='title'>CESAR MUÑOZ</h1>
       <figure class='cursor-pointer' id='title-circle-show' onclick='scrollToTop()'>⬤</figure>
     </nav>
-    <section id='section1'>
+    <section id='section1' class='relative z-10 opacity-100'>
       <h2>Front-end<br />web developer</h2>
       <p>Front-end developer who cares deeply about user experience. Serious passion for UI design and new technologies.</p>
     </section>
-    <section id='section2'>
-      <h2>About</h2>
+    <section id='section2' class='relative z-10 opacity-0'>
+      <h2>Skills</h2>
+      <div id='skills'>
+        <i class='devicon-javascript-plain'></i>
+        <i class='devicon-react-original'></i>
+        <i class='devicon-nodejs-plain'></i>
+        <i class='devicon-typescript-plain'></i>
+        <i class='devicon-html5-plain'></i>
+        <i class='devicon-css3-plain'></i>
+        <i class='devicon-sass-original'></i>
+        <i class='devicon-bash-plain'></i>
+        <i class='devicon-tailwindcss-plain'></i>
+        <i class='devicon-git-plain'></i>
+      </div>
+      <h3 id='skill-display'></h3>
     </section>
-    <section id='section3'>
+    <section id='section3' class='relative z-10 opacity-0'>
       <h2>Flexcore</h2>
     </section>
-    <section id='section4'>
+    <section id='section4' class='relative z-10 opacity-0'>
       <h2>Amazon Clone</h2>
     </section>
     <script src='./main.js'></script>

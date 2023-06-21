@@ -4,7 +4,6 @@
 }
 
 * { box-sizing: border-box; }
-
 ::-webkit-scrollbar { display: none; }
 
 html {
@@ -14,22 +13,16 @@ html {
   overflow-x: hidden;
   transition: all 0.5s ease-in-out;
 }
-h1, h2, h3 {
-  color: #2F2F2F;
-  font-family: 'UltraSolar', serif;
-  font-weight: 600;
-}
+h1, h2, h3 { font-family: 'UltraSolar', serif; }
 
 section {
   height: 100vh;
   scroll-snap-align: start;
-  position: relative;
-  z-index: 10;
   transition: all 0.5s ease-in-out;
-  opacity: 0;
 }
 
 #title {
+  font-size: 1.25vw;
   transition: all 0.5s ease-in-out;
 }
 #title-circle-hide {
@@ -38,16 +31,6 @@ section {
 }
 #title-circle-show {
   transition:all 0.5s ease-in-out
-}
-
-#section1 { opacity: 1; }
-
-.flex::before {
-  content: '';
-}
-
-.flex::after {
-  content: '';
 }
 
 #yellow-circle {
@@ -80,38 +63,81 @@ section {
   position: fixed;
   top: 65vh;
   right: 50vw;
-  border: 1.5px solid #2F2F2F;
+  border: 2px solid #2F2F2F;
   border-radius: 100%;
   transition: all 0.5s ease-in-out;
   z-index: 1;
 }
 
+#section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
+  margin: 0 auto;
+  max-width: 70vw;
+}
+
 #section1 > h2 {
-  padding-top: 20vh;
-  padding-left: 20vw;
-  font-size: 11em;
+  font-size: 5.5vw;
 }
 
 #section1 > p {
-  color: #2F2F2F;
   font-family: 'Fahkwang', sans-serif;
   font-weight: 200;
-  font-size: 3.75em;
-  padding-top: 7.5vh;
-  padding-left: 40vw;
-  padding-right: 20vw;
+  font-size: 2vw;
+  width: 70%;
+  align-self: end;
 }
 
 #section2 > h2  {
   padding-top: 18vh;
-  font-size: 9em;
+  font-size: 5vw;
   text-align: center;
 }
 
-#section3 > h2,
+#section2 > h3  {
+  color: #FFFFFF;
+  font-size: 3vw;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 1vh;
+}
+
+#section3 > h2 {
+  color: #FFFFFF;
+  padding-top: 20vh;
+  font-size: 5vw;
+  text-align: center;
+}
+
 #section4 > h2 {
   color: white;
   padding-top: 20vh;
-  font-size: 9em;
+  font-size: 5vw;
   text-align: center;
+}
+
+#skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 10vh auto;
+  gap: 2vw;
+}
+
+#skills > i {
+  font-size: 4vw;
+  padding: 1.5vw;
+  border-radius: 1em;
+  border: 2px solid transparent;
+  transition-duration: 50ms;
+}
+
+#skills > i:hover {
+  background-color: white;
+  border: 2px solid black;
+  transition-duration: 50ms;
 }

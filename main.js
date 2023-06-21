@@ -34,7 +34,6 @@ const onScroll = () => {
     black_outline.style.width = `60vw`;
     black_outline.style.height = `60vw`;
     black_outline.style.borderColor = '#2F2F2F';
-    black_outline.style.borderWidth = '1.5px';
 
     section1.style.opacity = '1';
     section2.style.opacity = '0';
@@ -65,7 +64,6 @@ const onScroll = () => {
     black_outline.style.width = `60vw`;
     black_outline.style.height = `60vw`;
     black_outline.style.borderColor = '#2F2F2F';
-    black_outline.style.borderWidth = '1.5px';
 
     section1.style.opacity = '0';
     section2.style.opacity = '1';
@@ -94,7 +92,6 @@ const onScroll = () => {
     black_outline.style.width = `90vw`;
     black_outline.style.height = `90vw`;
     black_outline.style.borderColor = '#FFFFFF';
-    black_outline.style.borderWidth = '1px';
 
     section1.style.opacity = '0';
     section2.style.opacity = '0';
@@ -105,7 +102,7 @@ const onScroll = () => {
     title.style.fontSize = '0em';
     title_circle_hide.style.fontSize = '0em';
     title_circle_show.style.marginRight = '2em';
-    title_circle_show.style.color = '#007FFF';
+    title_circle_show.style.color = '#E50072';
     title_circle_show.style.fontSize = '1.5em';
   }
   if (window.pageYOffset > (window.innerHeight * 3 - 10)) {
@@ -116,27 +113,56 @@ const onScroll = () => {
     black_circle.style.right = '40vw';
     black_circle.style.width = `20vw`;
     black_circle.style.height = `20vw`;
-    black_circle.style.backgroundColor = '#FFFFFF';
+    black_circle.style.backgroundColor = '#FEBD6A';
+
 
     black_outline.style.top = '-40vw';
     black_outline.style.right = '5vw';
     black_outline.style.width = `90vw`;
     black_outline.style.height = `90vw`;
-    black_outline.style.borderColor = '#FFFFFF';
-    black_outline.style.borderWidth = '1px';
+    black_outline.style.borderColor = '#FEBD6A';
 
     section1.style.opacity = '0';
     section2.style.opacity = '0';
     section3.style.opacity = '0';
     section4.style.opacity = '1';
 
-    body.style.backgroundColor = '#FF9900';
+    body.style.backgroundColor = '#232F3E';
     title.style.fontSize = '0em';
     title_circle_hide.style.fontSize = '0em';
     title_circle_show.style.marginRight = '2em';
-    title_circle_show.style.color = '#FF9900';
+    title_circle_show.style.color = '#232F3E';
     title_circle_show.style.fontSize = '1.5em';
   }
 };
 
 window.addEventListener('scroll', onScroll);
+
+// Color dev icons on hover
+// ========================
+
+// Get all the elements in the skills section
+const skillsSection = document.getElementById('skills');
+const skillElements = skillsSection.getElementsByTagName('i');
+const skillDisplay = document.getElementById('skill-display');
+
+// Add event listeners to each skill element
+Array.from(skillElements).forEach((skillElement) => {
+  skillElement.addEventListener('mouseenter', addColoredClass);
+  skillElement.addEventListener('mouseleave', removeColoredClass);
+});
+
+// Function to add the 'colored' class
+function addColoredClass(event) {
+  event.target.classList.add('colored');
+
+  const iconType = event.srcElement.className.match(/-(.*?)-/);
+  skillDisplay.textContent = iconType[0].slice(1, -1);
+}
+
+// Function to remove the 'colored' class
+function removeColoredClass(event) {
+  event.target.classList.remove('colored');
+  skillDisplay.textContent = '';
+}
+
