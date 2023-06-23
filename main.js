@@ -6,6 +6,8 @@ const body = document.querySelector('html');
 const title = document.querySelector('#title');
 const title_circle_hide = document.querySelector('#title-circle-hide');
 const title_circle_show = document.querySelector('#title-circle-show');
+const fixed_name = document.querySelector('#fixed-name');
+const fixed_title = document.querySelector('#fixed-title');
 
 const yellow_circle = document.querySelector('#yellow-circle');
 const black_circle = document.querySelector('#black-circle');
@@ -34,6 +36,7 @@ const onScroll = () => {
     black_outline.style.width = `60vw`;
     black_outline.style.height = `60vw`;
     black_outline.style.borderColor = '#2F2F2F';
+    black_outline.style.opacity = '1';
 
     section1.style.opacity = '1';
     section2.style.opacity = '0';
@@ -46,6 +49,10 @@ const onScroll = () => {
     title_circle_show.style.marginRight = '0';
     title_circle_show.style.color = '#000000';
     title_circle_show.style.fontSize = '1em';
+
+    fixed_name.style.color = '#2F2F2F';
+    fixed_title.textContent = 'Scroll ↓';
+    fixed_title.style.color = '#2F2F2F';
   }
   if (window.pageYOffset > (window.innerHeight - 10)) {
     yellow_circle.style.top = '-90vw';
@@ -64,6 +71,7 @@ const onScroll = () => {
     black_outline.style.width = `60vw`;
     black_outline.style.height = `60vw`;
     black_outline.style.borderColor = '#2F2F2F';
+    black_outline.style.opacity = '1';
 
     section1.style.opacity = '0';
     section2.style.opacity = '1';
@@ -76,6 +84,10 @@ const onScroll = () => {
     title_circle_show.style.marginRight = '2em';
     title_circle_show.style.color = '#000000';
     title_circle_show.style.fontSize = '1.5em';
+
+    fixed_name.style.color = '#2F2F2F';
+    fixed_title.textContent = 'Skills';
+    fixed_title.style.color = '#2F2F2F';
   }
   if (window.pageYOffset > (window.innerHeight * 2 - 10)) {
     yellow_circle.style.width = `20vw`;
@@ -85,13 +97,14 @@ const onScroll = () => {
     black_circle.style.right = '40vw';
     black_circle.style.width = `20vw`;
     black_circle.style.height = `20vw`;
-    black_circle.style.backgroundColor = '#FFFFFF';
+    black_circle.style.backgroundColor = '#E50072';
 
     black_outline.style.top = '-40vw';
     black_outline.style.right = '5vw';
     black_outline.style.width = `90vw`;
     black_outline.style.height = `90vw`;
     black_outline.style.borderColor = '#FFFFFF';
+    black_outline.style.opacity = '.25';
 
     section1.style.opacity = '0';
     section2.style.opacity = '0';
@@ -102,8 +115,12 @@ const onScroll = () => {
     title.style.fontSize = '0em';
     title_circle_hide.style.fontSize = '0em';
     title_circle_show.style.marginRight = '2em';
-    title_circle_show.style.color = '#E50072';
+    title_circle_show.style.color = '#FFFFFF';
     title_circle_show.style.fontSize = '1.5em';
+
+    fixed_name.style.color = '#FFFFFF';
+    fixed_title.textContent = 'Proyect #1';
+    fixed_title.style.color = '#FFFFFF';
   }
   if (window.pageYOffset > (window.innerHeight * 3 - 10)) {
     yellow_circle.style.width = `20vw`;
@@ -113,14 +130,14 @@ const onScroll = () => {
     black_circle.style.right = '40vw';
     black_circle.style.width = `20vw`;
     black_circle.style.height = `20vw`;
-    black_circle.style.backgroundColor = '#FEBD6A';
-
+    black_circle.style.backgroundColor = '#FF9900';
 
     black_outline.style.top = '-40vw';
     black_outline.style.right = '5vw';
     black_outline.style.width = `90vw`;
     black_outline.style.height = `90vw`;
-    black_outline.style.borderColor = '#FEBD6A';
+    black_outline.style.borderColor = '#FF9900';
+    black_outline.style.opacity = '.3';
 
     section1.style.opacity = '0';
     section2.style.opacity = '0';
@@ -133,6 +150,10 @@ const onScroll = () => {
     title_circle_show.style.marginRight = '2em';
     title_circle_show.style.color = '#232F3E';
     title_circle_show.style.fontSize = '1.5em';
+
+    fixed_name.style.color = '#FFFFFF';
+    fixed_title.textContent = 'Proyect #2';
+    fixed_title.style.color = '#FFFFFF';
   }
 };
 

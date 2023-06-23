@@ -3,7 +3,10 @@
   src: url('./assets/UltraSolar_Normal.ttf')
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 ::-webkit-scrollbar { display: none; }
 
 html {
@@ -69,6 +72,24 @@ section {
   z-index: 1;
 }
 
+#fixed-name {
+  color: #2F2F2F;
+  position: fixed;
+  bottom: 5vh;
+  left: 3vw;
+  font-size: 1.25vw;
+  transition: all 0.5s ease-in-out;
+}
+
+#fixed-title {
+  color: #2F2F2F;
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  font-size: 1.25vw;
+  transition: all 0.5s ease-in-out;
+}
+
 #section1 {
   display: flex;
   flex-direction: column;
@@ -83,7 +104,6 @@ section {
 }
 
 #section1 > p {
-  font-family: 'Fahkwang', sans-serif;
   font-weight: 200;
   font-size: 2vw;
   width: 70%;
@@ -105,13 +125,13 @@ section {
   bottom: 1vh;
 }
 
-#section3 > h2 {
-  color: #FFFFFF;
-  padding-top: 20vh;
-  font-size: 5vw;
-  text-align: center;
+#section3,
+#section4 {
+  font-size: 1.1vw;
+  font-weight: 300;
 }
 
+#section3 > h2,
 #section4 > h2 {
   color: white;
   padding-top: 20vh;
@@ -133,11 +153,35 @@ section {
   padding: 1.5vw;
   border-radius: 1em;
   border: 2px solid transparent;
-  transition-duration: 50ms;
+  transition-duration: 100ms;
 }
 
 #skills > i:hover {
   background-color: white;
   border: 2px solid black;
-  transition-duration: 50ms;
+  transition-duration: 100ms;
+}
+
+.bubble-flexcore {
+  color: #FFFFFF;
+  background-color: #E50072;
+  font-size: 0.75vw;
+}
+
+.bubble-amazon {
+  color: #FFFFFF;
+  background-color: #FF9900;
+  font-size: 0.75vw;
+}
+
+.redirect-flexcore {
+  color: #FFFFFF;
+  background-color: #E50072;
+  font-size: 1vw;
+}
+
+.redirect-amazon {
+  color: #FFFFFF;
+  background-color: #FF9900;
+  font-size: 1vw;
 }
