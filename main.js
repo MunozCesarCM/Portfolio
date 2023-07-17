@@ -8,20 +8,17 @@ window.onload = () => {
     body.style.display = 'block';
   }, 2750 /* miliseconds */);
 
-  const colors = ['#E84545'];
-  const colorsSecondary = ['#97e845'];
+  const colors = ['#0399FF', '#ABDD22'];
   let colorIndex = localStorage.getItem('colorIndex');
 
   if (colorIndex !== null) {
     ++colorIndex;
     colorIndex %= colors.length;
     document.documentElement.style.setProperty('--color-primary', colors[colorIndex]);
-    document.documentElement.style.setProperty('--color-secondary', colorsSecondary[colorIndex]);
     localStorage.setItem('colorIndex', colorIndex);
   } else {
     colorIndex = 1;
     document.documentElement.style.setProperty('--color-primary', colors[colorIndex]);
-    document.documentElement.style.setProperty('--color-secondary', colorsSecondary[colorIndex]);
     localStorage.setItem('colorIndex', colorIndex);
   }
 };

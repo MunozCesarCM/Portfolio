@@ -68,17 +68,8 @@
   box-sizing: border-box;
 }
 
-::-moz-selection {
-  background: var(--color-secondary);
-  color: white;
-}
-::selection {
-  background: var(--color-secondary);
-  color: white;
-}
-
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 ::-webkit-scrollbar-track {
   background: white;
@@ -206,6 +197,7 @@ section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-shrink: 1;
   justify-content: space-between;
   font-size: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
 }
@@ -225,11 +217,23 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
 }
-.item__list {
+.item__list,
+.item__technologies {
   font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
   list-style-type: none;
   padding: 0;
   letter-spacing: 0.025rem;
+}
+.item__technologies > li {
+  display: inline-block;
+  font-weight: 500;
+  margin-right: 1em;
+  text-decoration: var(--color-primary) underline;
+  text-decoration-thickness: 2px;
+}
+.item__project {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width: 768px) {
@@ -257,6 +261,10 @@ section {
 
 .join {
   display: inline-block;
+}
+
+.partial-width {
+  width: 75%;
 }
 
 .wave {
@@ -293,7 +301,7 @@ svg #name {
 }
 svg #dot {
   text-transform: uppercase;
-  animation: strokeNew 2s linear 0.75s 1 normal forwards;
+  animation: strokeDot 2s linear 0.75s 1 normal forwards;
   font-size: clamp(9.5rem, 8rem + 2.5vw, 10rem);
   fill: rgba(0,0,0,0);
   stroke: rgba(0,0,0,0);
@@ -307,7 +315,7 @@ svg #dot {
 90%  { fill: rgba(0,0,0,0); stroke: black; stroke-width: 3; }
 100% { fill: black; stroke: black; stroke-dashoffset: 0%; stroke-dasharray: 70% 0; }
 }
-@keyframes strokeNew {
+@keyframes strokeDot {
 0%   { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,0); stroke-dashoffset: 20%; stroke-dasharray: 0 40%; stroke-width: 0; }
 10%  { stroke: white; stroke-width: 2; }
 73%  { stroke: white; }
