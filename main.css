@@ -1,7 +1,3 @@
-:root {
-  --color-primary: #8ac926;
-}
-
 @font-face {
   font-family: Apercu;
   src: url(./fonts/apercu/Apercu-Light.eot);
@@ -73,11 +69,11 @@
 }
 
 ::-moz-selection {
-  background: #007FFF;
+  background: var(--color-secondary);
   color: white;
 }
 ::selection {
-  background: #007FFF;
+  background: var(--color-secondary);
   color: white;
 }
 
@@ -129,7 +125,6 @@ header h2 {
   font-weight: 800;
   position: absolute;
   text-transform: uppercase;
-  letter-spacing: 0.055rem;
   opacity: 0;
 }
 
@@ -174,8 +169,6 @@ to {
   height: calc(100vh - 80px);
   left: 40px;
   top: 40px;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
 }
 }
 
@@ -224,6 +217,9 @@ section {
   padding: 0 2rem 2rem 2rem;
   min-width: 100px;
 }
+.section__body__item > p:not(:first-child) {
+  margin-top: 1em;
+}
 .item__title {
   font-size: 1rem;
   text-transform: uppercase;
@@ -264,6 +260,7 @@ section {
 }
 
 .wave {
+  margin-left: 0.5em;
   animation-name: wave-animation;
   animation-duration: 2.75s;
   animation-iteration-count: infinite;
@@ -289,17 +286,31 @@ svg {
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
 }
-svg text {
+svg #name {
   text-transform: uppercase;
   animation: stroke 2.75s linear 0s 1 normal forwards;
-  stroke-width: 2;
-  stroke: black;
   font-size: clamp(9.5rem, 8rem + 2.5vw, 10rem);
 }
+svg #dot {
+  text-transform: uppercase;
+  animation: strokeNew 2s linear 0.75s 1 normal forwards;
+  font-size: clamp(9.5rem, 8rem + 2.5vw, 10rem);
+  fill: rgba(0,0,0,0);
+  stroke: rgba(0,0,0,0);
+  stroke-width: 0;
+}
+
 @keyframes stroke {
 0%   { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,0); stroke-dashoffset: 20%; stroke-dasharray: 0 40%; stroke-width: 0; }
 10%  { stroke: white; stroke-width: 2; }
 73%  { stroke: white; }
 90%  { fill: rgba(0,0,0,0); stroke: black; stroke-width: 3; }
-100% { fill: black; stroke: black; stroke-dashoffset: -0%; stroke-dasharray: 70% 0; }
+100% { fill: black; stroke: black; stroke-dashoffset: 0%; stroke-dasharray: 70% 0; }
+}
+@keyframes strokeNew {
+0%   { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,0); stroke-dashoffset: 20%; stroke-dasharray: 0 40%; stroke-width: 0; }
+10%  { stroke: white; stroke-width: 2; }
+73%  { stroke: white; }
+90%  { fill: rgba(0,0,0,0); stroke: var(--color-primary); stroke-width: 3; }
+100% { fill: var(--color-primary); stroke: var(--color-primary); stroke-dashoffset: 0%; stroke-dasharray: 70% 0; }
 }

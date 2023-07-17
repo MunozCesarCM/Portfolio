@@ -6,19 +6,22 @@ window.onload = () => {
   body.style.display = 'none';
   setTimeout(function() {
     body.style.display = 'block';
-  }, 3000 /* miliseconds */);
+  }, 2750 /* miliseconds */);
 
-  const colors = ['#E71D36', '#FFC300', '#8AC926', '#3A86FF'];
+  const colors = ['#E84545'];
+  const colorsSecondary = ['#97e845'];
   let colorIndex = localStorage.getItem('colorIndex');
 
   if (colorIndex !== null) {
     ++colorIndex;
     colorIndex %= colors.length;
     document.documentElement.style.setProperty('--color-primary', colors[colorIndex]);
+    document.documentElement.style.setProperty('--color-secondary', colorsSecondary[colorIndex]);
     localStorage.setItem('colorIndex', colorIndex);
   } else {
-    colorIndex = Math.floor(Math.random() * colors.length);
+    colorIndex = 1;
     document.documentElement.style.setProperty('--color-primary', colors[colorIndex]);
+    document.documentElement.style.setProperty('--color-secondary', colorsSecondary[colorIndex]);
     localStorage.setItem('colorIndex', colorIndex);
   }
 };
