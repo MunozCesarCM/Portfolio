@@ -7,27 +7,39 @@
     <title>My Website</title>
     <link rel='stylesheet' href='./main.css'>
     <link rel='icon' href='./favicon.ico' type='image/x-icon'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <span class='header__hello'>Hello! <span class='wave'>👋</span></span>
-      <p class='header__tagline'>I'm <strong>Cesar Muñoz</strong>, a front-end software engineer focused on building beautiful web interfaces 👨‍💻</p>
-      <div class='header__contact'>
-        Contact me 👉
-        <a href='#' class='header__email'>munozcesar.cm@gmail.com</a>
+    <header id='header'>
+      <div class='background-box'>
+        <h2>Web Developer</h2>
       </div>
+      <div id='color-box'>
+        <h1>Cesar Muñoz</h1>
+      </div>
+      <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+          CESAR.
+        </text>
+      </svg>
     </header>
-    <main>
+    <main id='main'>
       <section>
-        <h2 class='section__title'>Background</h2>
+        <div class='section__title'>
+          <h2>Background</h2>
+        </div>
         <div class='section__body'>
           <div class='section__body__item'>
-            <p>I'm currently an Engineer at Upstatement building things for the web with some awesome people. I recently graduated from Northeastern University after completing three awesome six-month co-ops at MullenLowe U.S., Starry, and Apple Music.</p>
+            <p>I'm currently an <strong>Engineer at Upstatement</strong> building things for the web with some awesome people. I recently graduated from <strong>Northeastern University</strong> after completing three awesome six-month co-ops at <strong>MullenLowe U.S., Starry</strong>, and <strong>Apple Music.</strong></p>
           </div>
         </div>
       </section>
       <section>
-        <h2 class='section__title'>Skills</h2>
+        <div class='section__title'>
+          <h2>Skills</h2>
+        </div>
         <div class='section__body'>
           <div class='section__body__item'>
             <h3 class='item__title'>Development</h3>
@@ -51,7 +63,7 @@
           <div class='section__body__item'>
             <h3 class='item__title'>Tools</h3>
             <ul class='item__list'>
-              <li>Git / GitHub</li>
+              <li>Git + GitHub</li>
               <li>Linux CLI</li>
               <li>RESTful APIs</li>
               <li>NPM</li>
@@ -59,7 +71,17 @@
           </div>
         </div>
       </section>
+      <section>
+        <div class='section__title'>
+          <h2>Projects</h2>
+        </div>
+        <div class='section__body'>
+          <div class='section__body__item'>
+            <p>I'm currently an <strong>Engineer at Upstatement</strong> building things for the web with some awesome people. I recently graduated from <strong>Northeastern University</strong> after completing three awesome six-month co-ops at <strong>MullenLowe U.S., Starry</strong>, and <strong>Apple Music.</strong></p>
+          </div>
+        </div>
+      </section>
     </main>
-    <script src='index.js'></script>
+    <script src='main.js'></script>
   </body>
 </html>
