@@ -239,6 +239,9 @@ section {
 .section__body__item > p:not(:first-child) {
   margin-top: 1em;
 }
+.body__project:not(:first-child) {
+  margin-top: 3em;
+}
 .item__title {
   font-size: 1rem;
   text-transform: uppercase;
@@ -277,6 +280,7 @@ section {
   border: none;
   border-radius: 0.25rem;
   transition-duration: 100ms;
+  text-decoration: none;
 }
 .btn-live {
   border: 2px solid var(--color-primary);
@@ -317,7 +321,7 @@ section {
 }
 
 .partial-width {
-  width: 85%;
+  width: 80%;
   font-size: 0.9em;
 }
 
