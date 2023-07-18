@@ -8,7 +8,7 @@ window.onload = () => {
     body.style.display = 'block';
   }, 2750 /* miliseconds */);
 
-  const colors = ['#0399FF', '#ABDD22'];
+  const colors = ['#25B9F4', '#ABDD22'];
   let colorIndex = localStorage.getItem('colorIndex');
 
   if (colorIndex !== null) {

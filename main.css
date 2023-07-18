@@ -101,7 +101,8 @@ strong {
 main {
   width: min(100% - 1.5rem, 900px);
   margin: auto;
-  padding-top: 200px;
+  padding-top: 100px;
+  margin-top: 100px;
 }
 
 header {
@@ -231,7 +232,7 @@ section {
   font-weight: 300;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 1rem;
   padding: 0 2rem 2rem 2rem;
   min-width: 100px;
 }
@@ -248,7 +249,7 @@ section {
   font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
   list-style-type: none;
   padding: 0;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.02rem;
 }
 .item__technologies > li {
   display: inline-block;
@@ -260,6 +261,32 @@ section {
 .item__project {
   display: flex;
   flex-direction: column;
+}
+.item__actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.btn-live,
+.btn-code {
+  background-color: white;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  padding: 0.35rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  transition-duration: 100ms;
+}
+.btn-live {
+  border: 2px solid var(--color-primary);
+}
+.btn-live:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn-code:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
