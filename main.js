@@ -1,27 +1,22 @@
-window.onload = () => {
-  window.scrollTo(0, 0);
-
-  // Prevent scrolling during animation
-  const body = document.getElementById('main');
-  body.style.display = 'none';
-  setTimeout(function() {
-    body.style.display = 'block';
-  }, 2750 /* miliseconds */);
-};
-
-const backgroundBox = document.querySelector('.background-box');
 const colorBox = document.getElementById('color-box');
-const headerSvg = document.getElementById('header-svg');
+const headerHeight = 5; // Height when the box becomes full
 
 window.addEventListener('scroll', () => {
-  if (window.pageYOffset <= 5) {
-    colorBox.style.marginTop = '0';
+  const scrollPosition = window.pageYOffset;
+
+  // Calculate the target margin for the colorBox element
+  const targetMargin = Math.min(scrollPosition, window.innerHeight - headerHeight);
+
+  colorBox.style.marginTop = `${targetMargin}px`;
+
+  // Add or remove classes based on the scroll position
+  if (scrollPosition === 0) {
+    colorBox.classList.add('color-box-semi');
     colorBox.classList.remove('color-box-full');
-    colorBox.classList.remove('splash-animation');
-  } else if (window.pageYOffset > 5 && window.pageYOffset < window.innerHeight) {
-    colorBox.style.marginTop = window.pageYOffset + 'px';
+  } else if (scrollPosition < window.innerHeight) {
     colorBox.classList.add('color-box-full');
-  } else if (window.pageYOffset >= window.innerHeight) {
-    colorBox.style.marginTop = '100vh';
+    colorBox.classList.remove('color-box-semi');
+  } else {
+    colorBox.classList.add('splash-animation');
   }
 });
