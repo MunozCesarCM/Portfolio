@@ -7,18 +7,20 @@ window.onload = () => {
   setTimeout(function() {
     body.style.display = 'block';
   }, 2750 /* miliseconds */);
-
-  const colors = ['#25B9F4', '#ABDD22'];
-  let colorIndex = localStorage.getItem('colorIndex');
-
-  if (colorIndex !== null) {
-    ++colorIndex;
-    colorIndex %= colors.length;
-    document.documentElement.style.setProperty('--color-primary', colors[colorIndex]);
-    localStorage.setItem('colorIndex', colorIndex);
-  } else {
-    colorIndex = 1;
-    document.documentElement.style.setProperty('--color-primary', colors[colorIndex]);
-    localStorage.setItem('colorIndex', colorIndex);
-  }
 };
+
+const backgroundBox = document.querySelector('.background-box');
+const colorBox = document.getElementById('color-box');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset <= 5) {
+    colorBox.style.marginTop = '0';
+    colorBox.classList.remove('color-box-full');
+    colorBox.classList.remove('splash-animation');
+  } else if (window.pageYOffset > 5 && window.pageYOffset < window.innerHeight) {
+    colorBox.style.marginTop = window.pageYOffset + 'px';
+    colorBox.classList.add('color-box-full');
+  } else if (window.pageYOffset >= window.innerHeight) {
+    colorBox.style.marginTop = '100vh';
+  }
+});
