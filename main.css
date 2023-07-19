@@ -76,28 +76,25 @@
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 body, html {
   font-family: Apercu, "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   width: 100%;
+  overflow-x: hidden;
 }
 
 strong {
   font-weight: 800;
-}
-
-.screen-spacer {
-  height: 90vh;
 }
 
 main {
@@ -109,7 +106,6 @@ main {
 }
 
 header {
-  height: 100vh;
   margin: auto;
   position: relative;
 }
@@ -134,14 +130,6 @@ header h2 {
   right: 0;
   opacity: 0;
   animation: fade-in 400ms ease-in-out 2.5s 1 normal forwards;
-}
-
-.background-box {
-  width: calc(100vw - 80px);
-  height: calc(100vh - 80px);
-  position: absolute;
-  left: 40px;
-  top: 40px;
 }
 
 #color-box {
@@ -223,6 +211,10 @@ to {
   transform: rotate(-90deg);
 }
 
+#screen-spacer {
+  opacity: 0;
+}
+
 @keyframes splash {
 0% {
   width: 100vw;
@@ -244,12 +236,28 @@ to {
 }
 }
 
+.fade-in {
+  animation: fade-in 500ms ease-in-out 150ms 1 normal forwards;
+}
+
+.fade-out {
+  animation: fade-out 500ms ease-in-out 0ms 1 normal forwards;
+}
+
 @keyframes fade-in {
 from {
   opacity: 0;
 }
 to {
   opacity: 1;
+}
+}
+@keyframes fade-out {
+from {
+  opacity: 1;
+}
+to {
+  opacity: 0;
 }
 }
 
@@ -261,7 +269,7 @@ to {
 
 .about-web {
   font-weight: 300;
-  width: calc(40vw - 40px);
+  width: calc(35vw);
   height: calc(100vh - 80px);
   color: white;
   margin: 40px calc(40px + 15vw);
@@ -412,25 +420,28 @@ section {
 
 @keyframes wave-animation {
 0% { transform: rotate( 0.0deg) }
-10% { transform: rotate(14.0deg) }
-20% { transform: rotate(-8.0deg) }
-30% { transform: rotate(14.0deg) }
-40% { transform: rotate(-4.0deg) }
-50% { transform: rotate(10.0deg) }
-60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+15% { transform: rotate(14.0deg) }
+30% { transform: rotate(-8.0deg) }
+40% { transform: rotate(14.0deg) }
+55% { transform: rotate(-4.0deg) }
+70% { transform: rotate(10.0deg) }
+85% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
 100% { transform: rotate( 0.0deg) }
 }
 
 svg {
+  animation: splash-svg 2.75s ease-in-out 0s 1 normal forwards;
   position: absolute;
-  width: 100%; height: 100%;
+  margin-left: 25vw;
+  width: 100%;
+  height: 100%;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-}
-svg #name {
-  text-transform: uppercase;
-  animation: stroke 2.75s linear 0s 1 normal forwards;
+  z-index: 15;
   font-size: clamp(8.5rem, 7.5rem + 2.5vw, 9rem);
+}
+.splash-text {
+  animation: stroke 2.75s linear 0s 1 normal forwards;
 }
 svg #dot {
   text-transform: uppercase;
@@ -439,6 +450,76 @@ svg #dot {
   fill: rgba(0,0,0,0);
   stroke: rgba(0,0,0,0);
   stroke-width: 0;
+}
+
+@keyframes splash-svg {
+0% {
+  margin-left: 0;
+}
+50% {
+  margin-left: 0;
+}
+100% {
+  margin-left: 25vw;
+}
+}
+
+.slide-out {
+  animation: slide-out 750ms ease-in-out 0s 1 normal forwards;
+}
+.slide-in {
+  animation: slide-in 750ms ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes slide-out {
+from {
+  margin-left: 25vw;
+}
+to {
+  margin-left: 30vw;
+}
+}
+
+@keyframes slide-in {
+from {
+  margin-left: 30vw;
+}
+to {
+  margin-left: 25vw;
+}
+}
+
+.transform-white {
+  animation: transform-white 750ms ease-in-out 0s 1 normal forwards;
+}
+.transform-black {
+  animation: transform-black 750ms ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes transform-white {
+from {
+  fill: black;
+  stroke: black;
+}
+to {
+  fill: white;
+  stroke: white;
+}
+}
+
+@keyframes transform-black {
+0% {
+  fill: white;
+  stroke: white;
+}
+25% {
+  fill: white;
+  stroke: white;
+}
+100% {
+  fill: black;
+  stroke: black;
+}
 }
 
 @keyframes stroke {
@@ -452,8 +533,8 @@ svg #dot {
 0%   { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,0); stroke-dashoffset: 20%; stroke-dasharray: 0 40%; stroke-width: 0; }
 10%  { stroke: white; stroke-width: 2; }
 80%  { stroke: white; }
-90%  { fill: rgba(0,0,0,0); stroke: white; stroke-width: 3; }
-100% { fill: var(--color-primary); stroke: white; stroke-dashoffset: 0%; stroke-width: 3; stroke-dasharray: 70% 0; }
+90%  { fill: rgba(0,0,0,0); stroke: var(--color-primary); stroke-width: 3; }
+100% { fill: var(--color-primary); stroke: var(--color-primary); stroke-dashoffset: 0%; stroke-width: 3; stroke-dasharray: 70% 0; }
 }
 
 .text-flexcore { color: var(--color-flexcore); }
