@@ -1,5 +1,6 @@
 :root {
   --color-primary: #007FFF;
+  --color-primaryy: #FF5851;
   --color-flexcore: #007FFF;
   --color-amazon: #FE9901;
   --color-code: #8338ec;
@@ -117,15 +118,15 @@ strong {
 }
 
 .screen-spacer {
-  height: 100vh;
+  height: 80vh;
 }
 
 main {
   min-height: 100vh;
   width: min(100% - 1.5rem, 900px);
   margin: auto;
-  padding-top: 50px;
-  margin-top: 50px;
+  padding-top: 100px;
+  margin-top: 100px;
 }
 
 header {
@@ -157,7 +158,6 @@ header h2 {
 }
 
 .background-box {
-  background-color: #F8F8F8;
   width: calc(100vw - 80px);
   height: calc(100vh - 80px);
   position: absolute;
@@ -203,7 +203,7 @@ to {
     bounce 2s ease-in-out 2.5s infinite normal forwards;
   font-weight: 300;
   font-size: 1.25em;
-  color: #F8F8F8;
+  color: white;
   position: absolute;
   bottom: 5px;
   right: 8px;
@@ -216,7 +216,7 @@ to {
   animation: fade-in 400ms ease-in-out 2.5s 1 normal forwards;
   font-weight: 300;
   font-size: 0.8em;
-  color: #F8F8F8;
+  color: white;
   position: absolute;
   bottom: calc(3em + 15px);
   right: 0;
@@ -263,6 +263,7 @@ to {
 }
 
 .about-web {
+  font-weight: 300;
   width: calc(40vw - 40px);
   height: calc(100vh - 80px);
   color: white;
@@ -432,7 +433,7 @@ svg #name {
 }
 svg #dot {
   text-transform: uppercase;
-  animation: strokeDot 2s linear 0.75s 1 normal forwards;
+  animation: strokeDot 1.55s linear 1s 1 normal forwards;
   font-size: clamp(8.5rem, 7.5rem + 2.5vw, 9rem);
   fill: rgba(0,0,0,0);
   stroke: rgba(0,0,0,0);
@@ -441,17 +442,17 @@ svg #dot {
 
 @keyframes stroke {
 0%   { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,0); stroke-dashoffset: 20%; stroke-dasharray: 0 40%; stroke-width: 0; }
-10%  { stroke: #F8F8F8; stroke-width: 2; }
-73%  { stroke: #F8F8F8; }
+10%  { stroke: white; stroke-width: 2; }
+73%  { stroke: white; }
 90%  { fill: rgba(0,0,0,0); stroke: black; stroke-width: 3; }
 100% { fill: black; stroke: black; stroke-dashoffset: 0%; stroke-dasharray: 70% 0; }
 }
 @keyframes strokeDot {
 0%   { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,0); stroke-dashoffset: 20%; stroke-dasharray: 0 40%; stroke-width: 0; }
-10%  { stroke: #F8F8F8; stroke-width: 2; }
-73%  { stroke: #F8F8F8; }
-90%  { fill: rgba(0,0,0,0); stroke: #F8F8F8; stroke-width: 3; }
-100% { fill: var(--color-primary); stroke: #F8F8F8; stroke-dashoffset: 0%; stroke-width: 3; stroke-dasharray: 70% 0; }
+10%  { stroke: white; stroke-width: 2; }
+73%  { stroke: white; }
+90%  { fill: rgba(0,0,0,0); stroke: white; stroke-width: 3; }
+100% { fill: var(--color-primary); stroke: white; stroke-dashoffset: 0%; stroke-width: 3; stroke-dasharray: 70% 0; }
 }
 
 .text-flexcore { color: var(--color-flexcore); }

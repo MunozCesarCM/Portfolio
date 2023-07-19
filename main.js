@@ -11,6 +11,7 @@ window.onload = () => {
 
 const backgroundBox = document.querySelector('.background-box');
 const colorBox = document.getElementById('color-box');
+const headerSvg = document.getElementById('header-svg');
 
 window.addEventListener('scroll', () => {
   if (window.pageYOffset <= 5) {
