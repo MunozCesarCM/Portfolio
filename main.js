@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
   const scrollPosition = window.pageYOffset;
 
   // Calculate the target margin for the colorBox element
-  const targetMargin = Math.min(scrollPosition, 300 - headerHeight);
+  const targetMargin = Math.min(scrollPosition, 50 - headerHeight);
 
   colorBox.style.marginTop = `${targetMargin}px`;
   about.style.paddingTop = `${targetMargin * 0.8}px`;
@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
       headerSvg.classList.remove('slide-out');
     }
 
-  } else if (scrollPosition < 150) {
+  } else if (scrollPosition < 50) {
     colorBox.classList.add('color-box-full');
     colorBox.classList.remove('color-box-semi');
 
