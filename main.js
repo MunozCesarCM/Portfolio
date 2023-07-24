@@ -2,6 +2,7 @@ window.onload = () => {
   window.scroll(0, 0);
 };
 
+const scrollTop = document.getElementById('scroll-top');
 const colorBox = document.getElementById('color-box');
 const about = document.getElementById('screen-spacer');
 const nameTop = document.getElementById('nameTop');
@@ -56,8 +57,15 @@ window.addEventListener('scroll', () => {
       headerSvg.classList.add('slide-out');
       headerSvg.classList.remove('slide-in');
     }
-
-  } else {
+  }else {
     colorBox.classList.add('splash-animation');
+  }
+
+  if (scrollPosition <= window.innerHeight * 0.7) {
+    scrollTop.classList.add('d-none');
+    scrollTop.classList.remove('d-flex');
+  } else {
+    scrollTop.classList.add('d-flex');
+    scrollTop.classList.remove('d-none');
   }
 });

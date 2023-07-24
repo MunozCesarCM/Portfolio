@@ -557,3 +557,28 @@ to {
 .border-code { border: 2px solid var(--color-code); }
 .border-code:hover { background-color: var(--color-code); color: white; }
 .underline-code { text-decoration: var(--color-code) underline; }
+
+#scroll-top.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scroll-top.d-none {
+  display: none;
+}
+
+#scroll-top {
+  display: none;
+  font-size: 1.5rem;
+  background-color: var(--color-primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  color: white;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.75rem;
+  z-index: 100;
+  cursor: pointer;
+}
