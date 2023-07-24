@@ -407,7 +407,7 @@ section {
 }
 
 .partial-width {
-  width: 80%;
+  width: 65ch;
   font-size: 0.9em;
 }
 
