@@ -18,7 +18,7 @@ window.addEventListener('scroll', () => {
   const targetMargin = Math.min(scrollPosition, 300 - headerHeight);
 
   colorBox.style.marginTop = `${targetMargin}px`;
-  about.style.paddingTop = `${targetMargin}px`;
+  about.style.paddingTop = `${targetMargin * 0.8}px`;
 
   // Add or remove classes based on the scroll position
   if (scrollPosition === 0) {
@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
       headerSvg.classList.remove('slide-out');
     }
 
-  } else if (scrollPosition < 200) {
+  } else if (scrollPosition < 150) {
     colorBox.classList.add('color-box-full');
     colorBox.classList.remove('color-box-semi');
 

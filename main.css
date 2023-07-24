@@ -291,7 +291,7 @@ to {
 }
 
 section {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   display: flex;
 }
 .section__title {
@@ -332,6 +332,9 @@ section {
 }
 .body__project:not(:first-child) {
   margin-top: 3em;
+}
+.body__project {
+  margin-bottom: 100px;
 }
 .item__title {
   font-size: 1rem;
